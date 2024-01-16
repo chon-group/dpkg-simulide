@@ -12,6 +12,5 @@ for home_dir in /home/*; do
   echo "Arduino_inclPath=$home_dir/Arduino/libraries/" >> "$simulide_ini_path"
   echo "Arduino_toolPath=opt/chonos-embMAS/lib/arduino/" >> "$simulide_ini_path"
 
-  chown "$username:$username" "$simulide_ini_path"
-  chmod 644 "$simulide_ini_path"
-done
+  chown "$username:$username" "$home_dir/.local/share/simulide" -R
+ done
