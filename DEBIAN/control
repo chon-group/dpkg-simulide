@@ -3,7 +3,7 @@ Version: 0.1
 Priority:
 Architecture: amd64
 Essential:
-Depends:
+Depends: libfuse-dev
 Pre-depends: javino, chonos-serial-port-emulator
 Suggests:
 Installed-Size:
