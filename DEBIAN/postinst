@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Including SimulIDE parameters"
+
+for home_dir in /home/*; do
+  username=$(basename "$home_dir")
+  simulide_ini_path="$home_dir/.local/share/simulide/simulide.ini"
+
+  mkdir -p "$(dirname "$simulide_ini_path")"
+
+  echo "[General]" > "$simulide_ini_path"
+  echo "Arduino_inclPath=$home_dir/Arduino/libraries/" >> "$simulide_ini_path"
+  echo "Arduino_toolPath=opt/chonos-embMAS/lib/arduino/" >> "$simulide_ini_path"
+
+  chown "$username:$username" "$simulide_ini_path"
+  chmod 644 "$simulide_ini_path"
+done

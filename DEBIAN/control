@@ -1,0 +1,14 @@
+Package: chonos-simulide
+Version: 0.1
+Priority:
+Architecture: amd64
+Essential:
+Depends:
+Pre-depends: javino, chonos-serial-port-emulator
+Suggests:
+Installed-Size:
+Maintainer: chon@grupo.cefet-rj.br
+Conflicts: chonos
+Replaces:
+Provides:
+Description: SimulIDE Circuit Simulator
