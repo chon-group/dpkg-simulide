@@ -7,5 +7,5 @@ SimulIDE (Revision 1448) for Debian, Ubuntu, and derivatives.
 ```console
 echo "deb [trusted=yes] http://packages.chon.group/ chonos main" | sudo tee /etc/apt/sources.list.d/chonos.list
 sudo apt update
-sudo apt install linux-headers-`uname -r` chonos-simulide
+sudo apt install chonos-simulide
 ```
