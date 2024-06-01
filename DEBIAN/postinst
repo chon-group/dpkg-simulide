@@ -1,16 +1,18 @@
 #!/bin/bash
 
-echo "Including SimulIDE parameters"
+echo "Including SimulIDE parameters for all valid users"
 
-for home_dir in /home/*; do
-  username=$(basename "$home_dir")
-  simulide_ini_path="$home_dir/.local/share/simulide/simulide.ini"
+getent passwd | awk -F: '$3 == 0 || $3 >= 1000 {print $1, $6}' | while read -r username home_dir; do
+  if [ -d "$home_dir" ]; then
+    echo "Including SimulIDE parameters for: $username"
+    simulide_ini_path="$home_dir/.local/share/simulide/simulide.ini"
 
-  mkdir -p "$(dirname "$simulide_ini_path")"
+    mkdir -p "$(dirname "$simulide_ini_path")"
 
-  echo "[General]" > "$simulide_ini_path"
-  echo "Arduino_inclPath=$home_dir/Arduino/libraries/" >> "$simulide_ini_path"
-  echo "Arduino_toolPath=/opt/chonos-embMAS/lib/arduino/" >> "$simulide_ini_path"
+    echo "[General]" > "$simulide_ini_path"
+    echo "Arduino_inclPath=$home_dir/Arduino/libraries/" >> "$simulide_ini_path"
+    echo "Arduino_toolPath=/opt/group.chon/arduino/" >> "$simulide_ini_path"
 
-  chown "$username:$username" "$home_dir/.local/share/simulide" -R
- done
+    chown "$username:$username" "$home_dir/.local/share/simulide" -R
+  fi
+done

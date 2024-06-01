@@ -1,10 +1,10 @@
 Package: chonos-simulide
-Version: 0.1
+Version: 1.1.0-240601
 Priority:
 Architecture: amd64
 Essential:
 Depends: libfuse-dev
-Pre-depends: javino, chonos-serial-port-emulator
+Pre-depends: javino, chonos-serial-port-emulator, libc-bin, gawk
 Suggests:
 Installed-Size:
 Maintainer: chon@grupo.cefet-rj.br
