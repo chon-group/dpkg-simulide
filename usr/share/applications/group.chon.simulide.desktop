@@ -2,8 +2,8 @@
 [Desktop Entry]
 Terminal=false
 Type=Application
-Exec=/opt/chonos-embMAS/lib/simulide/simulide
-Name=SimulIDE (Revision 1448)
+Exec=/opt/group.chon/simulide/simulide
+Name=SimulIDE (Revision 1936)
 Comment=SimulIDE Circuit Simulator
 Categories=Development;Engineering;IDE;
 Icon=/usr/share/icons/group.chon/simulide.png
