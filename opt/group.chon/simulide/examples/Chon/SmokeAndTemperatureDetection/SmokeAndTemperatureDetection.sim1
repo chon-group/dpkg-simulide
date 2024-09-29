@@ -1,0 +1,53 @@
+<circuit version="1.0.0-SR1" rev="1448" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Dht22" CircId="Dht22-1" mainComp="false" Show_id="false" Show_Val="false" Pos="152,544" rotation="0" hflip="1" vflip="1" label="Dht22-1" idLabPos="-28,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT11" TempInc="2 °C" HumiInc="5 _%" />
+
+<item itemtype="Subcircuit" CircId="Uno-2" mainComp="false" Show_id="false" Show_Val="false" Pos="220,540" rotation="0" hflip="1" vflip="1" label="Uno-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="2_mega328-109" mainComp="true" Show_id="true" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="2_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="arduinoSmokeAndTemperatureDetection.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="SerialPort" CircId="SerialPort-4" mainComp="false" Show_id="false" Show_Val="false" Pos="260,512" rotation="0" hflip="1" vflip="1" label="SerialPort-4" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Port="/dev/ttyExogenous0" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
+
+<item itemtype="AudioOut" CircId="AudioOut-7" mainComp="false" Show_id="false" Show_Val="false" Pos="140,712" rotation="90" hflip="1" vflip="1" label="AudioOut-7" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" />
+
+<item itemtype="Led" CircId="Led-13" mainComp="false" Show_id="false" Show_Val="false" Pos="84,644" rotation="90" hflip="1" vflip="1" label="Led-13" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-18" mainComp="false" Show_id="false" Show_Val="false" Pos="108,644" rotation="90" hflip="1" vflip="1" label="Led-18" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Rail" CircId="Rail-50" mainComp="false" Show_id="false" Show_Val="false" Pos="-36,572" rotation="0" hflip="1" vflip="1" label="Rail-50" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Switch" CircId="Switch-52" mainComp="false" Show_id="false" Show_Val="false" Pos="24,572" rotation="0" hflip="1" vflip="1" label="Switch-52" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Image" CircId="Image-82" mainComp="false" Show_id="false" Show_Val="false" Pos="-32,548" rotation="0" hflip="1" vflip="1" label="Image-82" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="100 _Pixels" V_size="100 _Pixels" Border="2 _Pixels" Z_Value="-1" Color="#a0a0a4" Opacity="1" Image_File="mq-2-gas-sensor.jpg" />
+
+<item itemtype="Node" CircId="Node-65" mainComp="false" Pos="140,676" />
+
+<item itemtype="Node" CircId="Node-68" mainComp="false" Pos="108,676" />
+
+<item itemtype="Connector" uid="connector-83" startpinid="Uno-2-1" endpinid="SerialPort-4-pin1" pointList="228,564,192,564,192,520,220,520" />
+
+<item itemtype="Connector" uid="connector-84" startpinid="Uno-2-0" endpinid="SerialPort-4-pin0" pointList="228,556,200,556,200,504,220,504" />
+
+<item itemtype="Connector" uid="connector-85" startpinid="Uno-2-4" endpinid="Dht22-1-inPin" pointList="228,588,112,588,112,540,116,540" />
+
+<item itemtype="Connector" uid="connector-86" startpinid="Uno-2-3" endpinid="Led-13-lPin" pointList="228,580,84,580,84,628" />
+
+<item itemtype="Connector" uid="connector-87" startpinid="Uno-2-5" endpinid="Led-18-lPin" pointList="228,596,108,596,108,628" />
+
+<item itemtype="Connector" uid="connector-88" startpinid="Uno-2-2" endpinid="Switch-52-switch0pinN" pointList="228,572,40,572" />
+
+<item itemtype="Connector" uid="connector-89" startpinid="Rail-50-outnod" endpinid="Switch-52-pinP0" pointList="-20,572,8,572" />
+
+<item itemtype="Connector" uid="connector-90" startpinid="Uno-2-11" endpinid="AudioOut-7-lPin" pointList="228,652,148,652,148,696" />
+
+<item itemtype="Connector" uid="connector-91" startpinid="AudioOut-7-rPin" endpinid="Node-65-0" pointList="140,696,140,676" />
+
+<item itemtype="Connector" uid="connector-92" startpinid="Led-18-rPin" endpinid="Node-68-0" pointList="108,660,108,676" />
+
+<item itemtype="Connector" uid="connector-93" startpinid="Node-65-2" endpinid="Uno-2-GND2" pointList="140,676,228,676" />
+
+<item itemtype="Connector" uid="connector-94" startpinid="Led-13-rPin" endpinid="Node-68-1" pointList="84,660,84,676,108,676" />
+
+<item itemtype="Connector" uid="connector-95" startpinid="Node-68-2" endpinid="Node-65-1" pointList="108,676,140,676" />
+
+</circuit>
