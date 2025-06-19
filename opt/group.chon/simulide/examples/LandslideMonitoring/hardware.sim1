@@ -1,0 +1,43 @@
+<circuit version="1.1.0-SR1" rev="2069" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="AudioOut" CircId="AudioOut-3" mainComp="false" Show_id="false" Show_Val="false" Pos="616,536" rotation="-180" hflip="1" vflip="1" label="AudioOut-3" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" Frequency="1 kHz" />
+
+<item itemtype="Subcircuit" CircId="Uno-4" mainComp="false" Show_id="false" Show_Val="false" Pos="652,400" rotation="0" hflip="1" vflip="1" label="Uno-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="SerialPort" CircId="SerialPort-5" mainComp="false" Show_id="true" Show_Val="false" Pos="692,376" rotation="0" hflip="1" vflip="1" label="Computer USBPort" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="true" Port="/dev/ttyExogenous0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-19" mainComp="false" Show_id="false" Show_Val="false" Pos="832,456" rotation="-270" hflip="1" vflip="1" label="Potentiometer-19" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="0 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Image" CircId="Image-49" mainComp="false" Show_id="false" Show_Val="false" Pos="860,460" rotation="0" hflip="1" vflip="1" label="Image-49" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="40 _px" V_size="100 _px" Border="2 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" Image_File="imgs/soilMoistureSensor.png" />
+
+<item itemtype="Push" CircId="Push-51" mainComp="false" Show_id="false" Show_Val="false" Pos="568,440" rotation="0" hflip="1" vflip="1" label="Push-51" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-52" mainComp="false" Show_id="false" Show_Val="false" Pos="832,496" rotation="0" hflip="1" vflip="1" label="Ground-52" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Rail" CircId="Rail-54" mainComp="false" Show_id="false" Show_Val="false" Pos="832,420" rotation="-270" hflip="1" vflip="1" label="Rail-54" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Image" CircId="Image-56" mainComp="false" Show_id="false" Show_Val="false" Pos="604,476" rotation="0" hflip="1" vflip="1" label="Image-56" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="57 _px" V_size="60 _px" Border="2 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" Image_File="imgs/KY-027.png" />
+
+<item itemtype="Rail" CircId="Rail-66" mainComp="false" Show_id="false" Show_Val="false" Pos="544,464" rotation="-450" hflip="1" vflip="1" label="Rail-66" idLabPos="-16,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" />
+
+<item itemtype="Connector" uid="connector-67" startpinid="SerialPort-5-pin1" endpinid="Uno-4-1" pointList="652,384,640,384,640,424,660,424" />
+
+<item itemtype="Connector" uid="connector-68" startpinid="Uno-4-0" endpinid="SerialPort-5-pin0" pointList="660,416,636,416,636,368,652,368" />
+
+<item itemtype="Connector" uid="connector-69" startpinid="Uno-4-A0" endpinid="Potentiometer-19-PinM" pointList="804,456,816,456" />
+
+<item itemtype="Connector" uid="connector-70" startpinid="Uno-4-GND2" endpinid="AudioOut-3-rPin" pointList="660,536,632,536" />
+
+<item itemtype="Connector" uid="connector-71" startpinid="Potentiometer-19-PinB" endpinid="Ground-52-Gnd" pointList="832,472,832,480" />
+
+<item itemtype="Connector" uid="connector-72" startpinid="Rail-54-outnod" endpinid="Potentiometer-19-PinA" pointList="832,436,832,440" />
+
+<item itemtype="Connector" uid="connector-73" startpinid="Uno-4-3" endpinid="Push-51-switch0pinN" pointList="660,440,584,440" />
+
+<item itemtype="Connector" uid="connector-74" startpinid="Uno-4-11" endpinid="AudioOut-3-lPin" pointList="660,512,644,512,644,544,632,544" />
+
+<item itemtype="Connector" uid="connector-75" startpinid="Push-51-pinP0" endpinid="Rail-66-outnod" pointList="552,440,544,440,544,448" />
+
+</circuit>
