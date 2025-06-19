@@ -21,22 +21,24 @@ sudo apt install linux-headers-`uname -r` chonos-simulide
 
     * __Attribution__ — You must give __appropriate credit__ like below:
 
-    FREITAS, Bruno Policarpo Toledo; LAZARIN, Nilson Mori; PANTOJA, Carlos Eduardo. Uma Proposta de Emulador de Portas Seriais para Sistemas Multiagentes Embarcados. _In_: Workshop-Escola de Sistemas de Agentes, seus Ambientes e Aplicações (WESAAC), 17. , 2023, Pelotas/RS. Anais [...]. Pelotas: UFPel, 2023 . p. 55-66. URL: [https://zenodo.org/record/8329081](https://www.researchgate.net/publication/373484449_Uma_Proposta_de_Emulador_de_Portas_Seriais_para_Sistemas_Multiagentes_Embarcados)
+    Bruno Freitas, Nilson Lazarin, and Carlos Pantoja. 2023. A Proposal for a Serial Port Emulator for Embedded Multi-Agent Systems. In _Proceedings of the 17th Workshop-School on Agents, Environments, and Applications_, August 30, 2023, Pelotas/RS, Brasil. SBC, Porto Alegre, Brasil, 55-66. DOI: https://doi.org/10.5753/wesaac.2023.33437.
 
     <details>
     <summary> Cite using Bibtex </summary>
 
         ```
         @inproceedings{freitas2023,
-        author = {Freitas, Bruno Policarpo Toledo and Lazarin, Nilson Mori and Pantoja, Carlos Eduardo},
-        title = {Uma {Proposta} de {Emulador} de {Portas} {Seriais} para {Sistemas} {Multiagentes} {Embarcados}},
-        booktitle = {Anais do XVII Workshop-Escola de Sistemas de Agentes, seus Ambientes e Aplicações (WESAAC 2023)},
+        author = {Bruno Freitas and Nilson Lazarin and Carlos Pantoja},
+        title = {{A Proposal for a Serial Port Emulator for Embedded Multi-Agent Systems}},
+        booktitle = {Proceedings of the 17th Workshop-School on Agents, Environments, and Applications},
         location = {Pelotas/RS},
         year = {2023},
+        issn = {2326-5434},
         pages = {55--66},
-        publisher = {UFPel},
-        address = {Pelotas, RS, Brasil},
-        url = {https://zenodo.org/record/8329081}
+        publisher = {SBC},
+        address = {Porto Alegre, RS, Brasil},
+        doi = {10.5753/wesaac.2023.33437},
+        url = {https://sol.sbc.org.br/index.php/wesaac/article/view/33437}
         }
         ```
     </details>
