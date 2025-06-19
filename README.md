@@ -1,6 +1,6 @@
 # SimulIDE Chon-Group Debian Package
 
-|![](https://github.com/user-attachments/assets/0e3609bc-9483-4785-b925-5b707007f712)|
+|![](https://github.com/user-attachments/assets/f6201538-c842-4f57-8e7a-06f0dda94b42)|
 |-|
 |This repository implements a APT Package of [SimulIDE 1.1.0 (Revision 2069)](https://simulide.com/p/testers/) for Debian, Ubuntu, and derivatives with [Cognitive Hardware on Network Basic Prototypes (ChonBots)](https://github.com/chon-group/ChonBots) examples.|
 
