@@ -3,7 +3,7 @@
 Terminal=false
 Type=Application
 Exec=/opt/group.chon/simulide/simulide
-Name=SimulIDE (Revision 1936)
+Name=SimulIDE (Revision 2069)
 Comment=SimulIDE Circuit Simulator
 Categories=Development;Engineering;IDE;
 Icon=/usr/share/icons/group.chon/simulide.png
