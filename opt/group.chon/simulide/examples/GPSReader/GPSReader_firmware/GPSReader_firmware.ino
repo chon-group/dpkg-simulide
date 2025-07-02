@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
-#include <TinyGPS++.h>
-#include <Javino.h>
+#include <TinyGPS++.h> // https://docs.arduino.cc/libraries/tinygpsplus/
+#include <Javino.h>    // https://javino.chon.group
 
 Javino javino;
 SoftwareSerial gpsSerial(10, 11); // RX 10, TX 11
