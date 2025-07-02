@@ -1,0 +1,29 @@
+<circuit version="1.1.0-SR1" rev="2069" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="false" Show_Val="false" Pos="1280,656" rotation="-270" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="GPSReader_firmware.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="SerialPort" CircId="SerialPort-2" mainComp="false" Show_id="true" Show_Val="false" Pos="1492,720" rotation="-270" hflip="1" vflip="1" label="Computer USBPort" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Auto="true" Port="/dev/ttyExogenous0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Subcircuit" CircId="Nano-8" mainComp="false" Show_id="true" Show_Val="false" Pos="1112,668" rotation="90" hflip="1" vflip="1" label="GPS NEO-6M" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0">
+<mainCompProps MainCompId="m328 TQFP-269" Frequency="16 MHz" Program="GPS_NEO-6M_module_emulator.hex" Auto_Load="false" saveEepr="true" MainMcu="false" SerialMon="-1" />
+</item>
+
+<item itemtype="Image" CircId="Image-40" mainComp="false" Show_id="false" Show_Val="false" Pos="1288,784" rotation="0" hflip="1" vflip="1" label="Image-40" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="32 _px" V_size="32 _px" Border="0 _px" Z_Value="-1" Color="#a0a0a4" Opacity="0" Image_File=".imgs/rfid-tags.png" />
+
+<item itemtype="Image" CircId="Image-44" mainComp="false" Show_id="false" Show_Val="false" Pos="1144,728" rotation="0" hflip="1" vflip="1" label="Image-44" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="150 _px" V_size="120 _px" Border="2 _px" Z_Value="101" Color="#a0a0a4" Opacity="1" Image_File=".imgs/gps.jpg" />
+
+<item itemtype="Connector" uid="Connector-113" startpinid="Nano-8-GND0" endpinid="Uno-1-GND2" pointList="1180,720,1180,684,1336,684,1336,696" />
+
+<item itemtype="Connector" uid="Connector-115" startpinid="Uno-1-0" endpinid="SerialPort-2-pin0" pointList="1456,696,1456,676,1500,676,1500,680" />
+
+<item itemtype="Connector" uid="Connector-116" startpinid="Uno-1-1" endpinid="SerialPort-2-pin1" pointList="1448,696,1448,672,1484,672,1484,680" />
+
+<item itemtype="Connector" uid="Connector-125" startpinid="Uno-1-10" endpinid="Nano-8-5" pointList="1368,696,1368,676,1148,676,1148,720" />
+
+<item itemtype="Connector" uid="Connector-128" startpinid="Nano-8-3" endpinid="Uno-1-11" pointList="1164,720,1164,680,1360,680,1360,696" />
+
+<item itemtype="Connector" uid="Connector-129" startpinid="Nano-8-Vin" endpinid="Uno-1-3V3" pointList="1204,768,1204,852,1368,852,1368,840" />
+
+</circuit>
